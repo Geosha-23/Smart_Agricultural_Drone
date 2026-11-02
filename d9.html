@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental History</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.stat-box {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 120px;
+}
+
+button {
+    background: #634AFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5037cc;
+}
+
+.temperature-log {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #634AFF;
+    color: white;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.insights {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.alert {
+    color: red;
+}
+
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Environmental History</h1>
+        <div class="stats">
+            <div class="stat-box">
+                <p>Date Range</p>
+                <span>Last 30 days</span>
+                <button>Change</button>
+            </div>
+            <div class="stat-box">
+                <p>Average</p>
+                <span>76.2°F / 24.5°C</span>
+            </div>
+            <div class="stat-box">
+                <p>High</p>
+                <span>89.6°F / 32.0°C</span>
+            </div>
+            <div class="stat-box">
+                <p>Low</p>
+                <span>62.8°F / 17.1°C</span>
+            </div>
+        </div>
+
+        <div class="temperature-log">
+            <h2>Temperature Log</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Field</th>
+                        <th>High</th>
+                        <th>Low</th>
+                        <th>Avg</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>June 15, 2023</td>
+                        <td>North Field</td>
+                        <td>86°F</td>
+                        <td>68°F</td>
+                        <td>77°F</td>
+                    </tr>
+                    <tr>
+                        <td>June 14, 2023</td>
+                        <td>North Field</td>
+                        <td>84°F</td>
+                        <td>65°F</td>
+                        <td>74°F</td>
+                    </tr>
+                    <tr>
+                        <td>June 13, 2023</td>
+                        <td>North Field</td>
+                        <td>81°F</td>
+                        <td>70°F</td>
+                        <td>79°F</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="actions">
+            <button class="download">Download CSV</button>
+            <button class="report">Generate Report</button>
+        </div>
+
+        <div class="insights">
+            <h2>Insights</h2>
+            <p class="alert">⚠️ Temperature Anomaly Detected</p>
+        </div>
+    </div>
+</body>
+</html>

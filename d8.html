@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Power System Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .card {
+            flex: 1;
+            background: #f1f3f5;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background: #007bff;
+            color: white;
+        }
+        .battery-health, .maintenance {
+            margin-top: 20px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Drone Power System Details</h2>
+        </div>
+        
+        <div class="cards">
+            <div class="card">
+                <h3>Battery Level</h3>
+                <p><strong>87%</strong></p>
+            </div>
+            <div class="card">
+                <h3>Solar Efficiency</h3>
+                <p><strong>92%</strong></p>
+            </div>
+            <div class="card">
+                <h3>Power Consumption</h3>
+                <p><strong>1.2 kWh</strong></p>
+            </div>
+            <div class="card">
+                <h3>Runtime</h3>
+                <p><strong>4.5 hrs</strong></p>
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <h3>Power Consumption Breakdown</h3>
+            <table>
+                <tr>
+                    <th>Component</th>
+                    <th>Power Usage (kWh)</th>
+                    <th>Efficiency</th>
+                </tr>
+                <tr>
+                    <td>Propulsion System</td>
+                    <td>0.65</td>
+                    <td>54%</td>
+                </tr>
+                <tr>
+                    <td>Camera Systems</td>
+                    <td>0.28</td>
+                    <td>23%</td>
+                </tr>
+                <tr>
+                    <td>Sensor Array</td>
+                    <td>0.15</td>
+                    <td>13%</td>
+                </tr>
+                <tr>
+                    <td>Communication</td>
+                    <td>0.12</td>
+                    <td>10%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="battery-health">
+            <h3 class="section-title">Battery Health</h3>
+            <p><strong>Charge Cycles:</strong> 12 of 500</p>
+            <p><strong>Temperature:</strong> 32°C (Optimal)</p>
+            <p><strong>Voltage Stability:</strong> 14.8V (Stable)</p>
+            <p><strong>Last Full Charge:</strong> Yesterday, 8:45 PM (2.5 hrs)</p>
+        </div>
+        
+        <div class="maintenance">
+            <h3 class="section-title">Maintenance Recommendations</h3>
+            <p><strong>Solar Panel Cleaning:</strong> Recommended in 5 days</p>
+            <p><strong>Battery Calibration:</strong> Recommended now (Last done 45 days ago)</p>
+        </div>
+    </div>
+</body>
+</html>

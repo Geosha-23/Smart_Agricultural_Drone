@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature History</title>
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f4f5f7;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav {
+        background-color: #1e1e2f;
+        color: white;
+        padding: 15px 20px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    
+    main {
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+    
+    h2, h3 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    /* Cards Layout */
+    .status-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+    
+    .card, .trend-card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    .card h3, .trend-card p {
+        margin: 0;
+        color: #333;
+    }
+    
+    .card p {
+        font-size: 1.2em;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+    
+    button {
+        background-color: #634AFF;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+    }
+    
+    button:hover {
+        background-color: #5238c4;
+    }
+    
+    /* Table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    th, td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+    
+    th {
+        background: #634AFF;
+        color: white;
+    }
+    
+    tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+</style>
+</head>
+<body>
+    <nav>Drone Monitoring Dashboard</nav>
+
+    <main>
+        <h2>Temperature History</h2>
+
+        <section class="status-cards">
+            <div class="card">
+                <h3>Weekly Average</h3>
+                <p>75°F / 23.9°C</p>
+                <button>Details</button>
+            </div>
+            <div class="card">
+                <h3>Weekly High</h3>
+                <p>84°F / 28.9°C</p>
+                <button>Details</button>
+            </div>
+            <div class="card">
+                <h3>Weekly Low</h3>
+                <p>67°F / 16.7°C</p>
+                <button>Details</button>
+            </div>
+            <div class="card">
+                <h3>Temperature Range</h3>
+                <p>22°F / 12.2°C</p>
+                <button>Analysis</button>
+            </div>
+        </section>
+
+        <section>
+            <h3>7-Day Temperature Trend</h3>
+            <div class="trend-card">
+                <p>Graph showing daily high, low, and average temperatures over the past 7 days.</p>
+                <button>Export Data</button>
+                <button>Print</button>
+            </div>
+        </section>
+
+        <section>
+            <h3>Daily Temperature Summary</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>High</th>
+                        <th>Low</th>
+                        <th>Average</th>
+                        <th>Condition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Today</td>
+                        <td>78°F / 25.5°C</td>
+                        <td>68°F / 18.3°C</td>
+                        <td>73°F / 22.8°C</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr>
+                        <td>Yesterday</td>
+                        <td>80°F / 26.7°C</td>
+                        <td>69°F / 19.5°C</td>
+                        <td>75°F / 23.9°C</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr>
+                        <td>Monday</td>
+                        <td>84°F / 28.9°C</td>
+                        <td>70°F / 21.1°C</td>
+                        <td>77°F / 24.4°C</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>82°F / 27.8°C</td>
+                        <td>68°F / 20.0°C</td>
+                        <td>75°F / 23.9°C</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>79°F / 26.1°C</td>
+                        <td>67°F / 19.4°C</td>
+                        <td>73°F / 22.8°C</td>
+                        <td>Low</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

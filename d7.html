@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental History</title>
+  <style>
+    /* General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f5f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #1e1e2f;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
+    top: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #2d2d3a;
+    color: white;
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a.active, .sidebar ul li a:hover {
+    background-color: #634AFF;
+}
+
+/* Main Content */
+main {
+    margin-left: 220px;
+    margin-top: 80px;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.tabs button.active {
+    background-color: #634AFF;
+    color: white;
+}
+
+/* Status Cards */
+.status-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+}
+
+.card h3 {
+    margin: 0;
+    color: #333;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+/* Chart Placeholder */
+.chart-placeholder {
+    background: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px dashed #ccc;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    text-align: left;
+    background-color: #f0f0f0;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button.primary {
+    background-color: #634AFF;
+    color: white;
+}
+
+button.secondary {
+    background-color: #ccc;
+    color: black;
+}
+
+  </style>
+</head>
+<body>
+    <nav>AgroDrone Monitoring Dashboard</nav>
+
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="#">Water Drop</a></li>
+            <li><a href="#" class="active">Analytics</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>Environmental History</h2>
+
+        <div class="tabs">
+            <button class="active">Temperature</button>
+            <button>Humidity</button>
+            <button>Wind Speed</button>
+            <button>Rainfall</button>
+        </div>
+
+        <section class="status-cards">
+            <div class="card">
+                <h3>Date Range</h3>
+                <p><strong>Last 30 Days</strong></p>
+                <button>Change</button>
+            </div>
+
+            <div class="card">
+                <h3>Average</h3>
+                <p><strong>76.2°F / 24.5°C</strong></p>
+                <button>Details</button>
+            </div>
+
+            <div class="card">
+                <h3>Maximum</h3>
+                <p><strong>89.0°F / 32.0°C</strong></p>
+                <button>Details</button>
+            </div>
+
+            <div class="card">
+                <h3>Minimum</h3>
+                <p><strong>62.8°F / 17.1°C</strong></p>
+                <button>Details</button>
+            </div>
+        </section>
+
+        <section class="chart">
+            <h3>Temperature Trends</h3>
+            <div class="chart-placeholder">[Chart visualization would appear here]</div>
+        </section>
+
+        <section>
+            <h3>Daily Temperature Records</h3>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Morning Temp</th>
+                    <th>Afternoon Temp</th>
+                    <th>Night Temp</th>
+                    <th>Condition</th>
+                </tr>
+                <tr>
+                    <td>June 15, 2023</td>
+                    <td>78.5°F / 25.8°C</td>
+                    <td>85.9°F / 29.5°C</td>
+                    <td>72.3°F / 22.4°C</td>
+                    <td>Sunny</td>
+                </tr>
+                <tr>
+                    <td>June 14, 2023</td>
+                    <td>76.2°F / 24.6°C</td>
+                    <td>83.7°F / 28.7°C</td>
+                    <td>70.5°F / 21.4°C</td>
+                    <td>Partly Cloudy</td>
+                </tr>
+                <tr>
+                    <td>June 13, 2023</td>
+                    <td>74.8°F / 23.8°C</td>
+                    <td>81.3°F / 27.4°C</td>
+                    <td>68.9°F / 20.5°C</td>
+                    <td>Cloudy</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h3>Field Comparison</h3>
+            <p><strong>North Field:</strong> Average: 77.2°F / 25.7°C | Variance: ±3.5°F</p>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Monitoring Dashboard</title>
+   <style>
+    /* styles.css */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f5f7;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #1e1e2f;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.status-cards, .conditions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    margin: 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.card small {
+    display: block;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #634AFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover { 
+    background-color: #5238c4;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    padding: 10
+}
+   </style>
+</head>
+<body>
+    <nav>
+        <h1>Drone Monitoring Dashboard</h1>
+    </nav>
+    
+    <main>
+        <section class="field-overview">
+            <h2>Field Overview</h2>
+            <div class="status-cards">
+                <div class="card">
+                    <h3>Power Status</h3>
+                    <p>87% Battery</p>
+                    <small>Solar charging active - 4.2 kWh collected today</small>
+                    <a href="d8.html"> <button>Details</button></a>
+                </div>
+                <div class="card">
+                    <h3>Water Tank</h3>
+                    <p>68% Capacity</p>
+                    <small>Next refill scheduled in 45 minutes</small>
+                    <a href="d4.html"> <button>Schedule</button></a>
+                </div>
+                <div class="card">
+                    <h3>Coverage</h3>
+                    <p>3.2 Acres</p>
+                    <small>72% of field covered today</small>
+                    <a href="./d.html"> <button> view map</button></a>
+                    
+                </div>
+                <div class="card">
+                    <h3>Alerts</h3>
+                    <p>2 Weed Clusters</p>
+                    <small>Detected in the northeast quadrant</small>
+                    <a href="./d3.html" ><button>View Details</button></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="environment-conditions">
+            <h2>Environmental Conditions</h2>
+            <div class="conditions">
+                <div class="card">
+                    <h3>Temperature</h3>
+                    <p>78°F / 25.5°C</p>
+                   <a href="./d2.html" ><button>History</button></a>
+                </div>
+                <div class="card">
+                    <h3>Humidity</h3>
+                    <p>62% Relative Humidity</p>
+                    <a href ="d7.html"> <button>History</button></a>
+                </div>
+                <div class="card">
+                    <h3>Wind Speed</h3>
+                    <p>8 mph / 12.9 km/h</p>
+                    <a href="./d9.html"> <button>History</button></a>
+                </div>
+                <div class="card">
+                    <h3>Rainfall</h3>
+                    <p>0.2 in / 5mm expected</p>
+                    <a href ="d6.html"><button>Forecast</button></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="drones">
+            <h2>Active Drones</h2>
+            <ul>
+                <li>Drone-01: Active - 87% Battery - 68% Water</li>
+                <li>Drone-02: Charging - 42% Battery - 100% Water</li>
+                <li>Drone-03: Scheduled - 95% Battery - 100% Water</li>
+            </ul>
+        </section>
+
+        <section class="alerts">
+            <h2>Weed Detection Alerts</h2>
+            <ul>
+                <li>Thistle Cluster Detected - Northeast Quadrant, Row 12, Column 8</li>
+                <li>Bindweed Detected - Northeast Quadrant, Row 15, Column 4</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script> <!-- JavaScript for interactivity -->
+</body>
+</html>

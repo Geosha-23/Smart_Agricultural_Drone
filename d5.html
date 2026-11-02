@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation Forecast</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <nav>AgroDrone Monitoring Dashboard</nav>
+
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="#">Water Drop</a></li>
+            <li><a href="#" class="active">Analytics</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>Irrigation Forecast</h2>
+
+        <section class="status-cards">
+            <div class="card">
+                <h3>Forecast Period</h3>
+                <p><strong>Next 7 Days</strong></p>
+                <p>Showing irrigation predictions based on weather forecast and soil moisture data</p>
+                <button>Change Period</button>
+                <button class="secondary">Export Data</button>
+            </div>
+
+            <div class="card">
+                <h3>Water Usage</h3>
+                <p><strong>1,240 Gallons</strong></p>
+                <p>Estimated water consumption for all fields based on current conditions</p>
+                <button>View Details</button>
+            </div>
+
+            <div class="card">
+                <h3>Drone Activity</h3>
+                <p><strong>18 Missions</strong></p>
+                <p>Scheduled drone irrigation missions for the forecast period</p>
+                <button>Adjust Schedule</button>
+            </div>
+        </section>
+
+        <section>
+            <h3>Weather Forecast</h3>
+            <div class="weather-controls">
+                <span>Data | Temperature | Precipitation | Wind | Humidity</span>
+                <p>Today: 79°F, 45% | Wind: 5 mph</p>
+                <p>Tomorrow: 75°F, 60% | Wind: 7 mph</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Field Irrigation Needs</h3>
+            <div class="tabs">
+                <button class="active">All Fields</button>
+                <button>North Sector</button>
+                <button>South Sector</button>
+                <button>East Sector</button>
+                <button>West Sector</button>
+            </div>
+
+            <div class="field-list">
+                <div class="field-item">
+                    <p>Field 4-12</p>
+                    <span>Corn - 12 acres</span>
+                    <input type="checkbox">
+                </div>
+                <div class="field-item">
+                    <p>Field B-05</p>
+                    <span>Soybeans - 8 acres</span>
+                    <input type="checkbox">
+                </div>
+                <div class="field-item">
+                    <p>Field C-23</p>
+                    <span>Wheat - 14 acres</span>
+                    <input type="checkbox">
+                </div>
+                <div class="field-item">
+                    <p>Field D-08</p>
+                    <span>Alfalfa - 6 acres</span>
+                    <input type="checkbox">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Recommended Actions</h3>
+            <div class="actions">
+                <div class="action-card high-priority">
+                    <h4>Schedule Field C-23</h4>
+                    <p>Soil moisture levels critically low. Schedule irrigation within 24 hours.</p>
+                    <button class="primary">Schedule Now</button>
+                    <button class="secondary">Dismiss</button>
+                </div>
+
+                <div class="action-card">
+                    <h4>Refill Water Tanks</h4>
+                    <p>Schedule water tank refill before next usage to ensure sufficient supply.</p>
+                    <button class="primary">Schedule Refill</button>
+                    <button class="secondary">View Details</button>
+                </div>
+
+                <div class="action-card">
+                    <h4>Drone Battery Check</h4>
+                    <p>3 drones require battery replacement before scheduled missions.</p>
+                    <button class="primary">View Drones</button>
+                    <button class="secondary">Postpone</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

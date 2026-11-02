@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Water Tank Refill</title>
+    <style>
+        /* General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f5f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #1e1e2f;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
+    top: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #2d2d3a;
+    color: white;
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a.active, .sidebar ul li a:hover {
+    background-color: #634AFF;
+}
+
+/* Main Content */
+main {
+    margin-left: 220px;
+    margin-top: 80px;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Cards Layout */
+.status-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card, .status-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3, .status-card h3 {
+    margin: 0;
+    color: #333;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+/* Tabs */
+.tab-buttons {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab-buttons button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.tab-buttons button.active {
+    background-color: #634AFF;
+    color: white;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    flex: 1;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button.primary {
+    background-color: #634AFF;
+    color: white;
+}
+
+button.secondary {
+    background-color: #ccc;
+    color: black;
+}
+
+/* Table */
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background: #f0f0f0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+    </style>
+</head>
+<body>
+    <nav>AgroDrone Monitoring Dashboard</nav>
+
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="#">Water</a></li>
+            <li><a href="#" class="active">Analytics</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>Schedule Water Tank Refill</h2>
+
+        <section class="status-card">
+            <h3>Current Status</h3>
+            <p><strong>Drone-01 Water Tank</strong></p>
+            <p>68% Capacity (34 gallons remaining)</p>
+            <button>View History</button>
+        </section>
+
+        <section>
+            <h3>Refill Options</h3>
+            <div class="tab-buttons">
+                <button class="active">Automatic</button>
+                <button>Manual</button>
+                <button>Custom</button>
+            </div>
+
+            <div class="status-cards">
+                <div class="card">
+                    <h3>Next Scheduled Refill</h3>
+                    <p>Today @ 2:45 PM (in 45 minutes)</p>
+                    <button>Edit</button>
+                </div>
+                <div class="card">
+                    <h3>Refill Location</h3>
+                    <p>Main Water Station (Northwest)</p>
+                    <button>Edit</button>
+                </div>
+                <div class="card">
+                    <h3>Water Source</h3>
+                    <p>Rainwater Collection Tank</p>
+                    <button>Edit</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Refill Threshold Settings</h3>
+            <div class="input-group">
+                <label>Minimum capacity before refill</label>
+                <input type="range" min="0" max="100" value="25">
+                <span>25%</span>
+            </div>
+            <div class="input-group">
+                <label>Target fill capacity</label>
+                <input type="range" min="0" max="100" value="100">
+                <span>100%</span>
+            </div>
+        </section>
+
+        <section>
+            <h3>Refill Priority</h3>
+            <p><strong>Priority Level:</strong> Normal (Will not interrupt ongoing tasks)</p>
+        </section>
+
+        <div class="buttons">
+            <button class="primary">Save Changes</button>
+            <button class="secondary">Cancel</button>
+        </div>
+
+        <section>
+            <h3>Refill History</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Mode</th>
+                        <th>Location</th>
+                        <th>Capacity Change</th>
+                        <th>Volume</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Today, 10:15 AM</td>
+                        <td>Automatic</td>
+                        <td>Main Water Station</td>
+                        <td>25% → 100%</td>
+                        <td>50 gallons</td>
+                    </tr>
+                    <tr>
+                        <td>Yesterday, 4:30 PM</td>
+                        <td>Manual</td>
+                        <td>Secondary Station</td>
+                        <td>18% → 100%</td>
+                        <td>50 gallons</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

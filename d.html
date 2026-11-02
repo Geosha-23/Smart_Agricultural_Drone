@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Coverage Dashboard</title>
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 250px;
+    background: #1e1e2d;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background: #f4f4f9;
+}
+
+header h1 {
+    margin: 0 0 20px;
+}
+
+/* Cards */
+.stats {
+    display: flex;
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: #634AFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #4a37cc;
+}
+
+/* Table */
+.drone-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+.drone-table th, .drone-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.drone-table th {
+    background: #634AFF;
+    color: white;
+}
+
+/* Detected Issues */
+.issues {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.issues ul {
+    list-style: none;
+    padding: 0;
+}
+
+.issues ul li {
+    padding: 8px 0;
+}
+
+/* Action Button */
+.action-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #ff5733;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.action-btn:hover {
+    background: #d84315;
+}
+
+    </style>
+</head>
+<body>
+    <script src="script.js"></script>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <h2>SmartAgriDrone</h2>
+        <ul>
+            <li><a href="#">Field Map View</a></li>
+            <li><a href="#">Environmental History</a></li>
+            <li><a href="#">Drone Monitoring</a></li>
+            <li><a href="#">Reports</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Field Coverage Map</h1>
+        </header>
+
+        <section class="stats">
+            <div class="card">
+                <h3>Current View</h3>
+                <p>Northeast Quadrant</p>
+                <button>Full Field View</button>
+            </div>
+            <div class="card">
+                <h3>Map Layers</h3>
+                <p>3 Active Layers</p>
+                <button>Manage Layers</button>
+            </div>
+            <div class="card">
+                <h3>Historical Data</h3>
+                <p>7 Days Available</p>
+                <button>View History</button>
+            </div>
+            <div class="card">
+                <h3>Export Options</h3>
+                <button>Export</button>
+            </div>
+        </section>
+
+        <!-- Drone Table -->
+        <section class="drone-table">
+            <h2>Active Drones on Map</h2>
+            <table>
+                <tr>
+                    <th>Drone</th>
+                    <th>Status</th>
+                    <th>Location</th>
+                    <th>Battery</th>
+                    <th>Water Level</th>
+                </tr>
+                <tr>
+                    <td>Drone-01</td>
+                    <td>Active</td>
+                    <td>Northeast Quadrant</td>
+                    <td>87%</td>
+                    <td>68%</td>
+                </tr>
+                <tr>
+                    <td>Drone-02</td>
+                    <td>Charging</td>
+                    <td>Docking Station</td>
+                    <td>42%</td>
+                    <td>100%</td>
+                </tr>
+                <tr>
+                    <td>Drone-03</td>
+                    <td>Scheduled</td>
+                    <td>Southwest Quadrant</td>
+                    <td>95%</td>
+                    <td>100%</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Detected Issues -->
+        <section class="issues">
+            <h2>Detected Issues</h2>
+            <ul>
+                <li><strong>Thistle Cluster</strong> - Row 12, Column 8</li>
+                <li><strong>Bindweed</strong> - Row 5, Column 3</li>
+                <li><strong>Low Moisture Area</strong> - Southwest corner</li>
+            </ul>
+        </section>
+
+        <button class="action-btn">Schedule Drone Inspection</button>
+    </div>
+
+</body>
+</html>
