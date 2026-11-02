@@ -1,58 +1,64 @@
-# 🌾 Smart Agricultural Drone Monitoring Dashboard
+# 🌾 SmartAgriDrone — Intelligent Agricultural Drone Command Center
 
-An interactive web-based monitoring suite and control interface for autonomous agricultural drones, designed for precision farming, real-time telemetry tracking, automated irrigation, weed detection, and environmental analytics.
-
----
-
-## 📌 Features & Modules
-
-- **Drone Monitoring Hub (`d1.html`)**: Real-time overview of active drones, battery status, water levels, environmental metrics, and alert triggers.
-- **Field Coverage & Mapping (`d.html`)**: Visual coverage tracking displaying monitored acreages and field grid status.
-- **Power & Solar Telemetry (`d8.html`)**: Battery discharge/charge rates, solar panel capture analytics, and power efficiency graphs.
-- **Water Tank & Refill Automation (`d4.html`)**: Schedule automated refill cycles and monitor reservoir capacity.
-- **Weed & Pest Detection (`d3.html`)**: Cluster identification for invasive weeds (such as thistle and bindweed) with pinpoint row and column coordinates.
-- **Environmental Analytics**:
-  - **Temperature Trends (`d2.html`)**: Historical and real-time field temperatures.
-  - **Humidity Levels (`d7.html`)**: Relative humidity monitoring for moisture optimization.
-  - **Wind Speed & Atmospheric Data (`d9.html`)**: Wind speed metrics to ensure safe flight parameters.
-- **Irrigation Forecasts (`d5.html`, `d6.html`)**: Predictive rainfall and soil watering schedules to conserve water.
+Next-generation autonomous agricultural drone fleet monitoring, real-time field coverage mapping, precision irrigation automation, power diagnostics, and AI weed detection built with **React (Vite)** and modern glassmorphism aesthetics.
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Features & Modules
 
-No build tools or external servers required!
-
-1. Clone the repository:
-   ```bash
-   git clone git@github.com:Geosha-23/Smart_Agricultural_Drone.git
-   cd Smart_Agricultural_Drone
-   ```
-2. Open `index.html` or `d1.html` directly in your web browser.
+- **🚀 Fleet Overview (`OverviewDashboard.jsx`)**: Real-time telemetry, active drones status, weed detection alerts banner, and quick environmental indicators.
+- **🗺️ Field Coverage & Radar Map (`FieldMapView.jsx`)**: Interactive 2D radar grid map with GPS coordinates, quadrant views (NE, NW, SE, SW), layer toggles (Crop NDVI, Soil Moisture, Weed Clusters, Flight Paths), and pinpoint inspectors.
+- **⚡ Power & Solar Telemetry (`PowerSystemView.jsx`)**: Real-time battery levels, solar charging analytics, power consumption breakdown by subsystem (Propulsion, Cameras, Sensors, Comms), and battery health diagnostics with cell calibration.
+- **💧 Water Tank & Refill Automation (`WaterRefillView.jsx`)**: Drone water payload capacity, interactive threshold sliders (min trigger & target capacity), refill mode toggles (Automatic / Manual / Custom), station selector, and operation history.
+- **🌦️ Predictive Irrigation & Weather Forecast (`IrrigationForecastView.jsx`)**: 7-day predictive water consumption, weather forecasts, drone mission schedule, and crop sector demand breakdown.
+- **🌿 Weed & Pest Detection Hub (`WeedDetectionView.jsx`)**: High-resolution multispectral scan analysis, Canadian Thistle & Bindweed cluster details, coordinate pinpointing, severity badges, and targeted drone spot-spraying dispatch.
+- **📊 Environmental & Microclimate Analytics (`EnvironmentalHistoryView.jsx`)**: Multi-metric tabs for Temperature, Humidity, Wind Speed, and Rainfall with interactive SVG telemetry curve charts and CSV export.
 
 ---
 
-## 📂 Project Structure
+## 🛠️ Quick Start Guide
 
-```text
-├── index.html       # Landing redirect to primary dashboard
-├── d1.html          # Main Drone Monitoring Dashboard
-├── d.html           # Field Coverage & Map Dashboard
-├── d2.html          # Temperature History
-├── d3.html          # Weed & Pest Cluster Detection Details
-├── d4.html          # Water Tank Refill Scheduler
-├── d5.html          # Irrigation Forecast Overview
-├── d6.html          # Extended Irrigation & Precipitation Forecast
-├── d7.html          # Humidity & Moisture History
-├── d8.html          # Drone Power & Battery Telemetry Dashboard
-├── d9.html          # Wind Speed & Environmental History
-├── style            # Master CSS styling sheet
-└── script.js        # Dashboard interactive scripts
+### 1. Install Dependencies
+```bash
+npm install
+```
+
+### 2. Start Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### 3. Production Build
+```bash
+npm run build
 ```
 
 ---
 
-## 🛠️ Built With
+## 📂 Project Architecture
 
-- **HTML5** & **CSS3**
-- **JavaScript (ES6+)**
+```text
+├── index.html                   # Entry HTML with Google Fonts
+├── vite.config.js               # Vite configuration
+├── package.json                 # Project dependencies & scripts
+├── src/
+│   ├── main.jsx                 # React root bootstrap
+│   ├── App.jsx                  # Main application orchestrator & toast stack
+│   ├── index.css                # Master aerospace glassmorphism design system
+│   ├── data/
+│   │   └── mockData.js          # Drone telemetry, weather & hazard data
+│   └── components/
+│       ├── Sidebar.jsx          # Navigation with fleet health status
+│       ├── Topbar.jsx           # Live clock, telemetry chips, emergency RTL
+│       ├── ScheduleModal.jsx    # Mission dispatch & flight scheduler modal
+│       └── views/
+│           ├── OverviewDashboard.jsx
+│           ├── FieldMapView.jsx
+│           ├── PowerSystemView.jsx
+│           ├── WaterRefillView.jsx
+│           ├── IrrigationForecastView.jsx
+│           ├── WeedDetectionView.jsx
+│           └── EnvironmentalHistoryView.jsx
+└── legacy_static/               # Original HTML/CSS prototypes (preserved)
+```
